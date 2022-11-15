@@ -1,0 +1,35 @@
+{
+  "author": "liugang41",
+  "creator": {
+    "version": "3.5.0"
+  },
+  "dependencies": {
+    "jszip": "^3.6.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "archiver": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "shelljs": "^0.8.4"
+  },
+  "keywords": [
+    "football",
+    "tiger",
+    "gameH5"
+  ],
+  "license": "ISC",
+  "main": "build.js",
+  "name": "plus-m-tiger",
+  "repository": {
+    "type": "git",
+    "url": "git@code.gome.inc:game/plus-m-tiger.git"
+  },
+  "scripts": {
+    "prod": "cross-env NODE_ENV=prod project=gameH5 node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uat": "cross-env NODE_ENV=uat project=gameH5 node build.js"
+  },
+  "type": "3d",
+  "uuid": "c8ba0dca-3a9b-4314-93e9-6e31b2e9dc09",
+  "version": "3.5.0"
+}

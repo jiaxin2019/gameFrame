@@ -1,0 +1,78 @@
+{
+  "ver": "1.0.23",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d@6c48a",
+      "displayName": "slo_wihte_back",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d@f9941",
+      "displayName": "slo_wihte_back",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 34,
+        "height": 34,
+        "rawWidth": 34,
+        "rawHeight": 34,
+        "borderTop": 19,
+        "borderBottom": 14,
+        "borderLeft": 18,
+        "borderRight": 16,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "sprite-frame",
+    "redirect": "e5f0fadb-25bc-4911-b16d-57dbc5d56c0d@f9941",
+    "compressSettings": {
+      "useCompressTexture": false
+    },
+    "fixAlphaTransparencyArtifacts": false
+  }
+}

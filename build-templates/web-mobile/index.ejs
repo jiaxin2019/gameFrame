@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    <%= projectName %>
+  </title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="<%= orientation %>" />
+  <meta name="x5-orientation" content="<%= orientation %>">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style.css?v=20210621" />
+  <link rel="shortcut icon" href="//app.gomein.net.cn/csr/public/images/public/favicon.ico?v=20200825"
+    type="image/x-icon" />
+  <link rel="apple-touch-icon"
+    href="//app.gomein.net.cn/csr/public/images/public/apple-touch-icon-iphone.png?v=20200825" />
+  <link rel="apple-touch-icon" sizes="72x72"
+    href="//app.gomein.net.cn/csr/public/images/public/apple-touch-icon-ipad.png?v=20200825" />
+  <link rel="apple-touch-icon" sizes="114x114"
+    href="//app.gomein.net.cn/csr/public/images/public/apple-touch-icon-iphone4.png?v=20200825" />
+  <script>
+    window.is_zoom = 'Y';
+    (function () { var b = document.querySelector('meta[name="viewport"]') || document.createElement("meta"); b.setAttribute("name", "viewport"); if (window.is_zoom && "Y" == is_zoom) var c = 1, a = 1; else a = (c = window.devicePixelRatio) ? 1 / c : 1; document.documentElement.setAttribute("data-dpr", c || 1); b.setAttribute("content", "width=device-width,initial-scale=1, maximum-scale=" + a + ", minimum-scale=" + a + ", user-scalable=no,viewport-fit=cover"); document.head.appendChild(b); document.addEventListener("DOMContentLoaded", function () { b.setAttribute("content", "width=device-width,initial-scale=1, maximum-scale=" + a + ", minimum-scale=" + a + ", user-scalable=no,viewport-fit=cover") }) })();
+    (function () {
+      document.documentElement.getAttribute("data-dpr"); var a = 100 / 750 *
+        document.documentElement.offsetWidth; document.querySelector("html").style.fontSize = a + "px";
+      window.addEventListener("resize", function () {
+        var a = 100 / 750 * document.querySelector("html").offsetWidth;
+        document.querySelector("html").style.fontSize = a + "px"
+      })
+    })();</script>
+  <script type="text/javascript" src="${cdn}/csr/common/upk/js/ctx_v3.min.js?v=20210708"></script>
+  <script type="text/javascript">
+    GomeCommonCtx.setCtx({
+      app: "shangcheng",
+      ver: "v1.0",
+      plt: "wap",
+      cmpid: "",
+      domain: ""
+    })
+  </script>
+  <script type="text/javascript" src="${cdn}/csr/common/upk/js/miniBridge_v1.min.js?t=20210708"></script>
+  <script type="text/javascript" src="${cdn}/csr/common/upk/js/to_login.min.js?t=20210708"></script>
+  <script type="text/javascript" src="${cdn}/csr/common/jsbridge/GomeJSBridge.min.js?t=20210708"></script>
+  <script src="${cdn}/csr/common/upk/js/common.js?v=20210708"></script>
+</head>
+
+<body>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <%- include(cocosTemplate, {}) %>
+    <div id="canvasWilMack"> </div>
+    <script src="${cdn}/sitemonitor/sa-sdk/sa.js?v=20210708"></script>
+    <script>
+      if (!(/(gome(plus|backup)|GomeSeller)?\/[iphone\/]{0,7}(\d*)\//i.test(navigator.userAgent) && RegExp.$3 > 216)) {
+        var _script = document.createElement("script");
+        _script.src = "${cdn}/csr/common/dll/sidebar.js?v=20210708";
+        document.body.appendChild(_script);
+      }
+    </script>
+    <script src="${cdn}/csr/common/upk/js/bottom-nav.js?v=20210708"></script>
+    <script>
+      setTimeout(function () {
+        if (/MicroMessenger.*miniProgram/i.test(navigator.userAgent)) {
+          wx.miniProgram.postMessage({
+            data: {
+              active_shareTit: "快乐小虎机，一起赢大奖",
+              active_shareimg: "https://gfs7.gomein.net.cn/wireless/T1exKnB_CT1RCvBVdK_375.jpg",
+              active_shareurl: location.href.replace("^https?", "https")
+            }
+          })
+        }
+      }, 1000)
+    </script>
+    <!-- <script>
+        (function () {
+          var t = Date.now();
+          document.addEventListener("visibilitychange", function () {
+            if (document.visibilityState === 'visible') {
+              var tt = (Date.now() - t) / 1000;
+              if (tt > 300) {
+                location.reload();
+              }
+            } else {
+              t = Date.now();
+            }
+          });
+        })();
+    </script> -->
+</body>
+
+</html>
